@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@root')->name('root');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 // Auth::routes() 等同于以下路由(在 vendor/laravel/ui/src/AuthRouteMethods.php 中即可找到定义的地方)：
 /* // 用户身份验证相关的路由
